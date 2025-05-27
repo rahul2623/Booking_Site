@@ -1,1 +1,31 @@
-<p>hotels works!</p>
+<div id="background">
+<form class="d-flex flex-column align-items-center" [formGroup]="myform" (ngSubmit)="onsubmit(myform)">
+  <div class="input-group bg-danger text-white p-3 rounded shadow-lg w-100" style="height: 80px; max-width: 600px; display: flex; align-items: center; justify-content: center;">
+    <h2 class="m-0 text-center w-100">Book Hotels</h2>
+  </div>
+  <div class="d-flex justify-content-center gap-3 mt-5">
+    <div class="input-group p-3 rounded shadow-lg" style="height: 100px; max-width: 300px; background-color: #ffeb3b;">
+      <span class="input-group-text bg-dark text-white border-0">🛏️</span>
+      <input type="text" class="form-control border-0 text-dark" placeholder="Add Your Location " name="airport" formControlName="locationofme">
+    </div>
+
+    
+
+    <div class="input-group p-3 rounded shadow-lg" style="height: 100px; max-width: 400px; background-color: #99d018;">
+      <span class="input-group-text bg-dark text-white border-0">Check In Date ✅</span>
+      <input type="date" class="form-control border-0 text-dark" id="checkin" name="date" formControlName="checkin">
+      
+    </div>
+  </div>
+  <div class="input-group p-3 rounded shadow-lg " style="height: 100px; max-width: 400px; margin-top: 12px; background-color: #e02935;">
+      <span class="input-group-text bg-dark text-white border-0">Check Out Date ❌</span>
+      <input type="date" class="form-control border-0 text-dark" id="checkout" name="date" formControlName="checkout">
+    </div>
+  
+
+  <!-- Center the search button properly -->
+  <div class="d-flex justify-content-center mt-4">
+    <button type="submit" class="btn btn-success btn-lg" >Search</button>
+  </div>
+</form>
+</div>
